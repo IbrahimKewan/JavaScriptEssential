@@ -1,33 +1,31 @@
-// Globaler Bereich
-var globalVar = "Ich bin eine globale Variable";
-let globalLet = "Ich bin auch global, aber mit let scoped";
-const globalConst = "Ich bin eine globale Konstante";
-
 {
-    // Blockbereich
-    var blockVar = "Ich bin eine block-scope var";
-    let blockLet = "Ich bin eine block-scope let";
-    const blockConst = "Ich bin eine block-scope const";
+  var scopedVar = "ursprünglich var";
+  let scopedLet = "ursprünglich let";
+  const scopedConst = "ursprünglich const";
+
+  // Innerhalb des Blocks neu zuweisen
+  scopedVar = "neu zugewiesen var";
+  scopedLet = "neu zugewiesen let";
+  // scopedConst = "neu zugewiesen const"; // ❌ wirft einen TypeError
+
+  console.log("Innerhalb Block:");
+  console.log(scopedVar);   // neu zugewiesen var
+  console.log(scopedLet);   // neu zugewiesen let
+  console.log(scopedConst); // ursprünglich const
 }
 
-// Globaler Gültigkeitsbereich
-console.log(globalVar);    // Ausgabe: "Ich bin eine globale Variable"
-console.log(globalLet);    // Ausgabe: "Ich bin auch global, aber mit let scoped"
-console.log(globalConst);  // Ausgabe: "Ich bin eine globale Konstante"
+console.log("Außerhalb Block:");
 
-// Block Scope
-console.log(blockVar);     // Ausgabe: "Ich bin eine block-scope var"
-console.log(blockLet);     // ReferenceError
-console.log(blockConst);   // ReferenceError
+// Zugriff auf var möglich (function scoped → wird hoisted)
+console.log(scopedVar); // neu zugewiesen var
 
-// Funktionsbereich
-function show() {
-    var functionVar = "Ich bin eine block-scope Variable";
-    let functionLet = "Ich bin ein block-scope let";
-    const functionConst = "Ich bin ein block-scope const";
-}
-show();
+// Zugriff auf let und const führt zu ReferenceError
+// console.log(scopedLet);   // ❌ ReferenceError
+// console.log(scopedConst); // ❌ ReferenceError
 
-console.log(functionVar);   // ReferenceError
-console.log(functionLet);   // ReferenceError
-console.log(functionConst); // ReferenceError
+// Neuzuweisung außerhalb des Blocks
+scopedVar = "außerhalb neu gesetzt";
+console.log("Außerhalb neu zugewiesenes var:", scopedVar);
+
+// scopedLet = "außerhalb neu gesetzt";   // ❌ ReferenceError
+// scopedConst = "außerhalb neu gesetzt"; // ❌ ReferenceError
