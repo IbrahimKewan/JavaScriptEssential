@@ -21,4 +21,3 @@ function reset(){
     displayCount();
     checkCountValue();
 }
-//test
