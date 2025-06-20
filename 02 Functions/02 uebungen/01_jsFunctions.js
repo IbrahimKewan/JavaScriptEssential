@@ -54,4 +54,4 @@ function zeit(){
     document.getElementById("zeit").innerHTML = `${pad(stunden)}:${pad(minuten)}:${pad(sekunden)}`;
     setTimeout(zeit, 1000); // Wiederhole die Funktion jede Sekunde
 };
-zeit();sdf
+zeit();
