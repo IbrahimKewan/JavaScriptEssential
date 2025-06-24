@@ -55,3 +55,30 @@
 //     setTimeout(zeit, 1000); // Wiederhole die Funktion jede Sekunde
 // };
 // zeit();
+
+// let z = 0;
+// const BtnZaehler = document.getElementById("zaehler");
+// BtnZaehler.addEventListener("click", function(){
+//     z++;
+//     console.log("Funktion aufruf: ", z);
+// });
+// function zaehler() {
+//     z++;
+//     console.log("Funktion aufruf: ", z);
+// }
+// const BtnZaehler2 = document.getElementById("zaehler");
+// BtnZaehler2.addEventListener("click", zaehler);
+
+function zae(){
+    let z = 0;
+    return function(){
+        z++;
+        console.log(z);
+    };
+}
+const meinZaeler = zae();
+meinZaeler();
+meinZaeler();
+meinZaeler();
+const meinZaeler_2222 = zae();
+meinZaeler_2222();
