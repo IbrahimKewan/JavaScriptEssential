@@ -27,6 +27,18 @@ btnMoreClicks.addEventListener("dblclick", function(){
 });
 
 //     Interaktive Eingabe HTML: Textfeld + Button JS: Beim Klick soll der Inhalt des Textfelds ausgelesen und in einem <div> angezeigt werden.
+const btnInput = document.getElementById("btnInput");
+btnInput.addEventListener("click", function(){
+    const textInput = document.getElementById("textInput");
+    const ausgabe = document.getElementById("ausgabe");
+
+    if(textInput.value == ""){
+        alert("Input darf nicht leer sein");
+        return;
+    }
+    ausgabe.innerHTML = textInput.value;
+    textInput.value = "";
+});
 
 // reload
 const btnReload = document.getElementById("btnReload");
