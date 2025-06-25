@@ -53,10 +53,10 @@ for (let i = 0; i < vollJaehring.length; i++) {
   createTable.appendChild(row);
 }
 
-tableContainer.innerHTML = ""; 
+tableContainer.innerHTML = "";
 tableContainer.appendChild(createTable);
 
-// Nur minderjährig 
+// Nur minderjährig
 const mind = benutzer.filter(user => user.alter < 18);
 console.log(mind);
 for (let index = 0; index < mind.length; index++) {
@@ -78,14 +78,14 @@ console.log(mehrAls4);
 const versoppeln = benutzer.map(user => user.alter * 2);
 console.log(versoppeln);
 
-// namen mit großbuchstaben 
+// namen mit großbuchstaben
 const names = ["Ali", "Maya", "Leo"];
 console.log(names.map(name => name.toUpperCase()));
 
 // namen mit begrüßung
 console.log(names.map(name => `Hello ${name}`));
 
-// Nur Erwaschene namen 
+// Nur Erwaschene namen
 const personen = [
   { name: "Tina", alter: 16 },
   { name: "Jan", alter: 21 },
@@ -101,7 +101,7 @@ console.log(summe);
 
 // längste wort finden
 const woerter = ["Apfel", "Banane", "Kiwi", "Wassermelone"];
-const laengste = woerter.reduce((aktWort, nextWort) => aktWort.length > nextWort.length ? aktWort : nextWort);
+const laengste = woerter.reduce((aktWort, nextWort) => aktWort.length > nextWort.length ? aktWort : nextWort, "");
 console.log(laengste);
 
 // summe eines array
@@ -110,14 +110,49 @@ const summeArray = ArrZahlen.reduce((aktWert, nextWert) => aktWert += nextWert, 
 console.log(summeArray);
 
 // durchschnitt berechen
-const durchschnitt = ArrZahlen.reduce((aktWert, nextWert) => aktWert+nextWert);
+const durchschnitt = ArrZahlen.reduce((aktWert, nextWert) => aktWert+nextWert, 0);
 let durch = durchschnitt / ArrZahlen.length;
 console.log(`durchschnitt: ${durch.toFixed(2)}`);
 
 // 4. Anzahl der Vorkommen zählen
 const buchstaben = ["a", "b", "a", "c", "a", "b"];
-const ausgabe = buchstaben.reduce((aktBuch, nextBuch) => aktBuch[nextBuch] ? aktBuch[nextBuch]++ : aktBuch[nextBuch] = 1);
+const ausgabe = buchstaben.reduce((aktBuch, nextBuch) =>
+    {
+        if(aktBuch[nextBuch]){
+            aktBuch[nextBuch]++;
+        }else{
+            aktBuch[nextBuch] = 1;
+        }
+        return aktBuch;
+    }
+,{});
 console.log(ausgabe);
+// Anzahl der Wörter in einem Satz zählen
+const text = "Hallo Welt das ist eine schöne Welt";
+const spliting = text.split(" ");
+const anz = spliting.reduce((akt,nxt) =>
+        {
+            if(akt[nxt]){
+                akt[nxt]++;
+            }else{
+                akt[nxt] = 1;
+            }
+            return akt;
+        }
+    ,{});
+console.log(anz);
+
+// Aufgabe: Zähle, wie oft jeder Vokal (a, e, i, o, u) vorkommt.
+const buchstaben_ = ["a", "b", "e", "i", "x", "a", "o", "u", "a"];
+// const anzahl = buchstaben.reduce((akt,nxt) =>{
+//     if(akt[nxt] == "a" || akt[nxt] == "e"){
+//         akt[nxt]++;
+//     }else{
+//         akt[nxt] = 1;
+//     }
+//     return akt;
+// }, {});
+console.log(anzahl);
 //  5. Alter-Summe von Personen
 const personeneeee = [
   { name: "Ali", alter: 20 },
