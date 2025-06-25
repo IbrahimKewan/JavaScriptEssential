@@ -4,35 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color: antiquewhite;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        div{
-            display:block;
-            width: 100%;
-            height: 100hv;
-        }
-        button{
-            height: 30px;
-            width: 100px;
-        }
-        button:hover{
-            background-color: aquamarine;
-            transform: scale(1.2s);
-            transition: all 1.2 ease;
-            border: 1px solid #ccc;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="main">
         <h1>Übungen zu Funktionen</h1>
-        <label for="zeit1">Zeit: <span id="zeit"></span></label><br><hr>
+        <label for="zeit1">Zeit: <span id="zeit">--:--</span></label>
+        <!-- <hr> -->
         <button id="zaehler">Zähler</button>
-        <br><hr>
+        <button id="reset">Reset</button>
+        <!-- <hr> -->
     </div>
     <script src="./01_jsFunctions.js"></script>
 </body>

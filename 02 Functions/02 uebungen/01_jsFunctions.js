@@ -112,9 +112,14 @@ zeit();
 
 // Button zähler
 const BtnZaehler = document.getElementById("zaehler");
+const btnReset = document.getElementById("reset");
 let x = 0;
 function zaehler(){
     x++;
     console.log(`btn Zähler: ${x}`);
 }
 BtnZaehler.addEventListener("click", zaehler);
+btnReset.addEventListener("click", function(){
+    x = 0;
+    console.log("Zähler wird zurück gesetzt ... ");
+});
