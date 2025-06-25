@@ -22,6 +22,7 @@ function zae(){
     return function(){
         z++;
         console.log(z);
+        // document.getElementById("divZaehler").innerHTML = `Zähler stand: ${x}`;
     };
 }
 const meinZaeler = zae();
@@ -37,6 +38,7 @@ function warteUndRufe(callback, sekunden){
 }
 function hallo() {
     console.log("Hallo nach 3 Sekunden!");
+    document.getElementById("timerString").innerHTML = "Hallo nach 3 Sekunden!";
 }
 warteUndRufe(hallo, 3);
 
@@ -64,12 +66,14 @@ const btnReset = document.getElementById("reset");
 let x = 0;
 function zaehler(){
     x++;
-    console.log(`btn Zähler: ${x}`);
+    document.getElementById("divZaehler").innerHTML = `Zähler stand: ${x}`;
+    // console.log(`btn Zähler: ${x}`);
 }
 BtnZaehler.addEventListener("click", zaehler);
 btnReset.addEventListener("click", function(){
     x = 0;
-    console.log("Zähler wird zurück gesetzt ... ");
+    document.getElementById("divZaehler").innerHTML = `Zähler stand: ${x}`;
+    // console.log("Zähler wird zurück gesetzt ... ");
 });
 
 // Sortiere nach Callback Schreibe eine Funktion sortiereMitVergleich(array, vergleichsfunktion), die ein Array sortiert – aber die Sortierlogik aus einer übergebenen Funktion bezieht.
@@ -81,3 +85,7 @@ let aufsteigend = sortiereMitVergleich(zalhen, function(a,b){
     return a-b;
 })
 console.log(aufsteigend);
+const refresh = document.getElementById("refresh");
+refresh.addEventListener("click", function(){
+    location.reload();
+});
