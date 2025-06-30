@@ -135,5 +135,3 @@ Hier bekommst du eine **komplette Übungssammlung** für alle wichtigen JavaScri
 34. Baue `meineReduce(array, callback, startwert)` – wie `reduce()`.
 
 ---
-
-
