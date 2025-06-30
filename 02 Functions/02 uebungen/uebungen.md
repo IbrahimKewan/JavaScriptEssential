@@ -70,5 +70,70 @@
     Zähle Klicks – und zeige das Ergebnis, wenn die Zeit vorbei ist.
 
 ---
+Sehr gerne! 💪
+Hier bekommst du eine **komplette Übungssammlung** für alle wichtigen JavaScript-Bereiche:
+👉 **Array-Methoden**, **Allgemeine Funktionen**, **Funktionen & Callbacks**.
 
-Möchtest du zu einer Aufgabe ein **visuelles Setup (HTML + Grundgerüst)** oder eine **automatische Testfunktion**? Sag einfach Bescheid!
+---
+
+## ✅ 1. **Array-Methoden – Übungen**
+
+### 📌 `forEach`, `map`, `filter`, `reduce`, `find`, `some`, `every`, `sort`, ...
+
+1. Verwende `forEach()`, um alle Namen in einem Array in der Konsole auszugeben.
+2. Erstelle mit `map()` ein neues Array mit den Längen aller Wörter in einem Wort-Array.
+3. Filtere mit `filter()` alle Zahlen über 100 aus einem Array.
+4. Nutze `reduce()`, um die Summe aller Zahlen in einem Array zu berechnen.
+5. Verwende `find()`, um die erste Zahl im Array zu finden, die durch 5 teilbar ist.
+6. Nutze `some()`, um zu prüfen, ob mindestens ein Element `null` ist.
+7. Nutze `every()`, um zu prüfen, ob alle Zahlen gerade sind.
+8. Sortiere ein Array von Zahlen **aufsteigend**.
+9. Verwandle ein Array von Objekten `{name, punktzahl}` in ein Array mit nur den Punktzahlen.
+10. Filtere alle Objekte aus einem Array mit `{name, aktiv: true|false}`, die **aktiv** sind.
+
+---
+
+## 🌍 2. **Allgemeine JavaScript-Funktionen – Übungen**
+
+### 📌 `parseInt`, `Number`, `String`, `Math`, `JSON`, `Object`, `Date`, ...
+
+11. Wandle einen String `"42.5"` in eine Ganzzahl und in eine Kommazahl um.
+12. Prüfe, ob `"abc"` eine gültige Zahl ist (Tipp: `isNaN()`).
+13. Runde `3.6` ab, auf und ganz normal.
+14. Erzeuge eine Zufallszahl zwischen `1` und `100`.
+15. Nutze `Object.keys()` und `Object.values()` auf `{name: "Ali", alter: 20}`.
+16. Erstelle einen Zeitstempel für das aktuelle Datum.
+17. Wandelt ein Objekt in einen JSON-String um – und wieder zurück.
+18. Erstelle ein Objekt mit verschachtelten Objekten und greife auf tiefe Werte zu.
+19. Nutze `Array.join()` um ein Array von Namen in einen Satz umzuwandeln.
+20. Verwende `Array.slice()` und `Array.splice()` an einem Beispielarray `[1,2,3,4,5]`.
+
+---
+
+## 🔁 3. **Funktionen & Callback-Prinzip – Übungen**
+
+### 📌 `function`, `arrow function`, `callback`, `this`, `bind`, `async/await`, ...
+
+21. Schreibe eine Funktion `begrüßen(name)`, die `"Hallo NAME"` zurückgibt.
+22. Verwandle diese Funktion in eine Arrow Function.
+23. Erstelle `ausführen(callback)`, die eine Funktion ausführt, die ihr übergeben wird.
+24. Erstelle eine Funktion `rechnen(a, b, operationCallback)` → `+`, `-`, `*`, `/`
+25. Simuliere mit `setTimeout()` eine verzögerte Nachricht nach 2 Sekunden.
+26. Schreibe eine Funktion mit `...args`, die alle Zahlen summiert.
+27. Erstelle ein Objekt mit einer Methode und verwende `this` darin.
+28. Nutze `bind()`, um eine Funktion fest mit einem Objekt zu verbinden.
+29. Baue eine Funktion, die ein Promise zurückgibt – und rufe sie mit `async/await` auf.
+30. Schreibe eine Funktion mit `try/catch`, die eine JSON-Zeichenkette parst und Fehler behandelt.
+
+---
+
+## 🧠 Bonus – Selbstbau-Funktionen
+
+31. Baue `meineMap(array, callback)` – funktioniert wie `Array.prototype.map`.
+32. Baue `meineFilter(array, callback)` – wie `filter()`.
+33. Baue `meineForEach(array, callback)` – wie `forEach()`.
+34. Baue `meineReduce(array, callback, startwert)` – wie `reduce()`.
+
+---
+
+

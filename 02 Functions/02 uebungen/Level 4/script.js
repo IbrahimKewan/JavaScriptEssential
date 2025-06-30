@@ -144,22 +144,56 @@ console.log(anz);
 
 // Aufgabe: Zähle, wie oft jeder Vokal (a, e, i, o, u) vorkommt.
 const buchstaben_ = ["a", "b", "e", "i", "x", "a", "o", "u", "a"];
-// const anzahl = buchstaben.reduce((akt,nxt) =>{
-//     if(akt[nxt] == "a" || akt[nxt] == "e"){
-//         akt[nxt]++;
-//     }else{
-//         akt[nxt] = 1;
-//     }
-//     return akt;
-// }, {});
-console.log(anzahl);
+const vokals = "aeiou";
+const wieOft = buchstaben_.reduce((zaehler, vokal) => {
+    if(vokals.includes(vokal)){
+        if(zaehler[vokal]){
+            zaehler[vokal] = zaehler[vokal] +1;
+        }else{
+            zaehler[vokal] = 1;
+        }
+    }
+    return zaehler;
+}
+,{});
+console.log(wieOft);
 //  5. Alter-Summe von Personen
 const personeneeee = [
   { name: "Ali", alter: 20 },
   { name: "Maya", alter: 25 },
   { name: "Tom", alter: 30 }
 ];
+const sumAge = personeneeee.reduce((speicher, aktElem) => {
+    return speicher + aktElem.alter;
+},0);
+console.log(sumAge);
 // 6. Alle Namen zu einem Satz verketten ("Ali, Maya und Tom")
-const namennnn = ["Ali", "Maya", "Tom"];
-
+const namennnn = ["Ali", "Maya", "test" , "asd","Tom"];
+const StrKette = namennnn.reduce((speicher, aktElem, index) => {
+    const istLetzter = index === namennnn.length -1;
+    const istErste = index === 0
+    
+    if(istErste){
+        return aktElem;
+    }else if(istLetzter){
+        return `${speicher} und ${aktElem}`;
+    }else{
+        return `${speicher}, ${aktElem}`;
+    }
+}, "");
+console.log(StrKette);
 // Eigene map-Funktion bauen Schreibe deine eigene Funktion meineMap(array, callback) – sie soll wie Array.prototype.map() funktionieren.
+function meineMap(array, callback){
+    const neuesArray = [];
+
+    for (let index = 0; index < array.length; index++) {
+        const akteullesElement = array[index];
+        const neuerWert = callback(akteullesElement,index,array);
+        neuesArray.push(neuerWert);        
+    }
+    return neuesArray;
+}
+const ausgaben = meineMap(namennnn, (name, index) =>{
+    return `#${index +1} ${name}`;
+});
+console.log(ausgaben);
