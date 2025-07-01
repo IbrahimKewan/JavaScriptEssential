@@ -5,7 +5,7 @@ const employees = [
       { id: 4, name: 'test', age: 3, department: 'Finance', salary: 60000 },
       { id: 5, name: 'omar', age: 5, department: 'HR', salary: 6033000 },
       { id: 6, name: 'kerwa', age: 350, department: 'Finance', salary: 60000 },
-      { id: 2, name: 'jojo', age: 22, department: 'Finance', salary: 60000 },
+      { id: 2, name: 'dada', age: 22, department: 'Finance', salary: 60000 },
     ];
 function displayEmployees(){
   const displayEmployees = employees.map((employ,index) => 
@@ -24,11 +24,16 @@ function calculateTotalSalaries(){
 function displayHREmployees(){
   const HREmployees = employees.filter((employ) => employ.department === "HR");
   const displayHR = HREmployees.map((em) => `<br>ID: ${em.id} - name: ${em.name} - department: ${em.department}`).join('');
-  document.getElementById('employeesDetails').innerHTML = `<div><strong>Die mitarbeiter HR:</strong> <mark>${displayHR}</mark></div>`;
+  document.getElementById('employeesDetails').innerHTML = `<div><strong>Mitarbeiter mit ID:</strong> <mark>${displayHR}</mark></div>`;
 }
 
 function findEmployeeById(idNr){
   const findID = employees.find((employ) => employ.id === idNr);
-  const displayEmploy = `ID: ${findID.id} - name: ${findID.name}`;
+  let displayEmploy = "";
+  if(findID){
+    displayEmploy = `ID: ${findID.id} - name: ${findID.name}`;
+  }else{
+    displayEmploy = "ID wurde nicht gefunden ...";
+  }
   document.getElementById('employeesDetails').innerHTML = `<div><strong>Die mitarbeiter HR:</strong> <mark>${displayEmploy}</mark></div>`;
 }
