@@ -1,17 +1,25 @@
-const breakfastMenu = ['Pancakes- $12', 'Eggs Benedict -$22.99', 'Oatmeal -$21.99', 'Frittata -$15'];
+const breakfastMenu = [
+    {artikel : 'Pancakes', preis: 12},
+    {artikel: 'Eggs Benedict' , preis: 22.99}, 
+    {artikel: 'Oatmeal', preis: 21.99} , 
+    {artikel: 'Frittata', preis: 15}
+];
 const mainCourseMenu = ['Steak', 'Pasta', 'Burger', 'Salmon'];
 const dessertMenu = ['Cake', 'Ice Cream', 'Pudding', 'Fruit Salad'];
 
-const breakfastMenuItemsHTML = breakfastMenu.map((item,index) => `<p>Artikel ${index+1}: ${item}</p>`).join('');
-document.getElementById('breakfastMenuItems').innerHTML = breakfastMenuItemsHTML;
+const breakfastMenuItems = breakfastMenu.map((item,index) =>
+    `<p>Artikel ${index +1}: ${item.artikel} - Preis:${item.preis}$</p>`
+);
+document.getElementById("breakfastMenuItems").innerHTML = breakfastMenuItems.join('');
 
-let mainCourseItem = '';
-mainCourseMenu.forEach((item, index) => {
-mainCourseItem += `<p>Item ${index + 1}: ${item}</p>`;});
-document.getElementById('maincourseMenuItems').innerHTML = mainCourseItem;
+let mainCourseMenuItems = "";
+mainCourseMenu.forEach((item,index) =>
+    mainCourseMenuItems += `<p>Artikel ${index+1}: ${item}</p>`
+);
+document.getElementById('maincourseMenuItems').innerHTML = mainCourseMenuItems;
 
-let dessertItem = '';
-for (let i = 0; i < dessertMenu.length; i++) {
-    dessertItem += `<p>Item ${i + 1}: ${dessertMenu[i]}</p>`;
+let dessertMenuItems = "";
+for (let index = 0; index < dessertMenu.length; index++) {
+    dessertMenuItems += `<p>Artikel ${index+1}: ${dessertMenu[index]}</p>`;    
 }
-document.getElementById('dessertMenuItems').innerHTML = dessertItem;
+document.getElementById('dessertMenuItems').innerHTML = dessertMenuItems;
