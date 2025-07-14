@@ -1,0 +1,22 @@
+############## BOM
+An diesem Punkt des Kurses wissen Sie Bescheid:
+
+JavaScript verwendet Try-catch-Blöcke zur Fehlersuche, um Fehler zu behandeln, Fehlerinformationen zu protokollieren, die Stabilität der Anwendung zu erhalten und die allgemeine Benutzererfahrung zu verbessern.
+
+Das DOM ist eine Programmierschnittstelle, die es JavaScript ermöglicht, die Struktur, den Inhalt und den Stil von Webdokumenten zu verändern.
+
+Das DOM hat verschiedene Knotentypen wie Dokument-, Element-, Text-, Attribut-, Kommentar- und Dokumenttyp-Knoten.
+
+Beim Zugriff auf das DOM werden Verweise auf bestimmte HTML-Elemente auf einer Webseite abgerufen.
+
+Zu den Methoden für den Zugriff auf Elemente gehören getElementById, getElementsByClassName, getElementsByTagName und querySelector.
+
+Der Browser-Objektmodus oder BOM umfasst wichtige Komponenten wie das Fenster-, Dokument-, Navigations-, Bildschirm-, Verlaufs- und Standortobjekt.
+
+BOM erleichtert die Benutzerinteraktion, die Fenstersteuerung, die Navigation, den Zugriff auf Client-Informationen und die Datenspeicherung
+
+Die Durchquerung des DOM ermöglicht den programmatischen Zugriff, die Manipulation und die Interaktion mit HTML-Elementen unter Verwendung von JavaScript
+
+Das Durchlaufen des DOM-Baums nach oben und unten ist für die Navigation zwischen über- und untergeordneten Elementen unerlässlich.
+
+Das Styling von DOM-Elementen ermöglicht es Ihnen, die visuelle Darstellung von HTML-Elementen dynamisch zu verändern.

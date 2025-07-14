@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByClassName Example</title>
+</head>
+<body>
+    <p class="highlighted">This is a highlighted paragraph.</p>
+    <p class="highlighted">This is another highlighted paragraph.</p>
+    <p>This is a regular paragraph.</p>
+    <script>
+        const highlightedElements = document.getElementsByClassName('highlighted');
+        // Modify the text content of each element
+        for (let i = 0; i < highlightedElements.length; i++) {
+            highlightedElements[i].textContent = `This paragraph is highlighted! for class ${i + 10}`;
+            highlightedElements[i].setAttribute('style', 'color: red;');
+            highlightedElements[i].style.cssText = 'color: green;';
+            highlightedElements[i].style.setProperty('color', 'yellow');
+            highlightedElements[i].style.color = 'red';
+        }
+    </script>
+</body>
+</html>
