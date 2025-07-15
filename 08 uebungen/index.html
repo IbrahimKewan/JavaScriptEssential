@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wunschliste</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Ibrahim Kewan</div>
+    <nav>
+      <ul>
+        <li><a href="#">Card</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main">
+    <h1>Wunschliste</h1>
+    <div class="form-container">
+      <input type="text" id="inputTxt" placeholder="Artikelname eingeben" required>
+      <select name="kategory" id="inputKategory" required>
+        <option value="" disabled selected>Bitte wählen</option>
+        <option value="food">Essen</option>
+        <option value="book">Bücher</option>
+        <option value="elektric">Elektronik</option>
+        <option value="travel">Reisen</option>
+      </select>
+      <div id="output"></div>
+      <div class="buttons">
+        <button id="add">Hinzufügen</button>
+        <button id="delete">Löschen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer>Ibrahim Kewan</footer> -->
+  <script src="script.js"></script>
+</body>
+</html>
