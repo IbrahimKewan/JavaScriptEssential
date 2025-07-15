@@ -37,3 +37,7 @@ footer {
     margin: 20px;
     border-radius: 10px; 
 }
+.done{
+    text-decoration: line-through;
+    color: gray;
+}
