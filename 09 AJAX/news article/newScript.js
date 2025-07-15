@@ -1,11 +1,11 @@
 var xhr = new XMLHttpRequest();
-var url = './new_article.json';
-xhr.open('GET', url,true);
+var url = './new_article.json'; 
+xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
-xhr.onload = function (){
-    var news = xhr.response.news;
-    var newsDicv = document.getElementById('news');
+xhr.onload = function () {
+    var news = xhr.response.articles; 
+    var newsDiv = document.getElementById('news'); 
 
     news.forEach(function(new_art) {
         var articleDiv = document.createElement('div');
@@ -29,21 +29,23 @@ xhr.onload = function (){
 
         var benefitsHeader = document.createElement('h3');
         benefitsHeader.textContent = 'Vorteile:';
-        
+
         var benefitsList = document.createElement('ul');
-        article.benefits.forEach(function(benefit) {
-        
-        var listItem = document.createElement('li');
-          listItem.textContent = benefit;
-          benefitsList.appendChild(listItem);
+        new_art.benefits.forEach(function(benefit) {
+            var listItem = document.createElement('li');
+            listItem.textContent = benefit;
+            benefitsList.appendChild(listItem);
         });
-        
+
         articleDiv.appendChild(title);
         articleDiv.appendChild(description);
         articleDiv.appendChild(waysHeader);
         articleDiv.appendChild(waysList);
         articleDiv.appendChild(benefitsHeader);
         articleDiv.appendChild(benefitsList);
-        articlesDiv.appendChild(articleDiv);
+
+        newsDiv.appendChild(articleDiv);
     });
-}
+};
+
+xhr.send();
